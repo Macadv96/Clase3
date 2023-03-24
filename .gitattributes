@@ -1,2 +1,67 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+public class Clase3Ejercicio1 {
+	public static void main(String[] args) {
+		String ejercicio1a= "Argentina programa";
+				int contador= 0;
+				char ap= 'a';
+				for(int i=0;i<ejercicio1a.length();i++) {
+					if(ejercicio1a.charAt(i)==ap) {
+						contador=contador+1;
+					}
+		
+	}
+				System.out.println(contador);
+
+	}
+
+}
+
+
+import java.util.Scanner;
+public class Clase3Ej1b {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner teclado= new Scanner(System.in);
+		int arrayNumeros[]= new int[3];
+		int i;
+		int m;
+		int aux;
+		boolean var=true;
+		System.out.println("ingrese los numeros");
+		for(i=0;i<3;i++) {
+			System.out.println("arrayNumeros["+i+"]=");
+			arrayNumeros[i]= teclado.nextInt();
+		}
+			 System.out.println("si desea orden ascendente ingrese true, caso contrario ingrese false");
+			var= teclado.nextBoolean();
+			if(var==true) {
+			for(i=0;i<3;i++) {
+				for(m=i+1;m<3;m++)
+					if(arrayNumeros[i]>arrayNumeros[m]) {
+						aux=arrayNumeros[i];
+						arrayNumeros[i]=arrayNumeros[m];
+						arrayNumeros[m]=aux;
+					}
+			}
+				for(i=0;i<3;i++) {
+				System.out.print("arrayNumeros["+(i+1)+"]=");
+				System.out.print(arrayNumeros[i]);
+			}
+			}else
+				if(var==false) {
+					for(i=0;i<3;i++) {
+						for(m=i+1;m<3;m++)
+							if(arrayNumeros[i]<arrayNumeros[m]) {
+								aux=arrayNumeros[i];
+								arrayNumeros[i]=arrayNumeros[m];
+								arrayNumeros[m]=aux;
+							}
+					}
+				for(i=0;i<3;i++) {
+					System.out.print("arrayNumeros["+(i+1)+"]=");
+					System.out.print(arrayNumeros[i]);
+				}
+		
+	}
+}
+}
