@@ -65,3 +65,38 @@ public class Clase3Ej1b {
 	}
 }
 }
+
+
+import java.util.Scanner;
+public class Clase3Ej2 {
+
+	public static void main(String[] args) {
+	Scanner teclado= new Scanner(System.in);
+	System.out.println("ingrese la cadena deseada");
+	String cadena1= teclado.nextLine();
+	System.out.println("ingrese el numero de desplazamiento");
+	
+	int num=teclado.nextInt();
+    String cadena2=
+    Clase3Ej2.cambiarLetra(num,cadena1);
+    
+    System.out.println(cadena2);
+	}
+
+	
+	public static String cambiarLetra(int num,String cadena1) {
+		String abc= "abcdefghijklmnñopqrstuvwyz";
+				String cadena2= "";
+		for (int i=0;i<cadena1.length();i++) {
+			for(int x=0;x<abc.length();x++) {
+				if(cadena1.charAt(i)==abc.charAt(x)) {
+					cadena2= cadena2+abc.charAt(x+num);
+				}
+			}
+		}
+			
+		return cadena2;
+
+	}
+
+}
